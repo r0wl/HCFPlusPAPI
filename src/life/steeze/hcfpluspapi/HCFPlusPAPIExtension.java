@@ -22,12 +22,12 @@ public class HCFPlusPAPIExtension extends PlaceholderExpansion {
 
     @Override
     public String getIdentifier() {
-        return "HCFPlusPAPIExtension";
+        return "hcfpluspapiexpansion";
     }
 
     @Override
     public String getAuthor() {
-        return "ViperCobra";
+        return "GeeGeeTom";
     }
 
     @Override
