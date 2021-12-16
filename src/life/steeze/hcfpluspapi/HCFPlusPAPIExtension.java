@@ -27,7 +27,7 @@ public class HCFPlusPAPIExtension extends PlaceholderExpansion {
 
     @Override
     public String getAuthor() {
-        return "GeeGeeTom";
+        return "geegeetom";
     }
 
     @Override
