@@ -9,9 +9,9 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.plugin.Plugin;
 
 public class HCFPlusPAPIExtension extends PlaceholderExpansion {
-    private Plugin p = Bukkit.getPluginManager().getPlugin("HCFPlus");
+    private final Plugin p = Bukkit.getPluginManager().getPlugin("HCFPlus");
     private HCFPlugin hcfplus = null;
-    private boolean color = ConfigManager.SHOW_COLOR_IN_PLACEHOLDER;
+    private final boolean color = ConfigManager.SHOW_COLOR_IN_PLACEHOLDER;
 
     @Override
     public boolean canRegister(){
@@ -22,7 +22,7 @@ public class HCFPlusPAPIExtension extends PlaceholderExpansion {
 
     @Override
     public String getIdentifier() {
-        return "hcfpluspapiexpansion";
+        return "hcfplus";
     }
 
     @Override
@@ -37,7 +37,7 @@ public class HCFPlusPAPIExtension extends PlaceholderExpansion {
 
     @Override
     public String onRequest(OfflinePlayer player, String params) {
-        if(params.equalsIgnoreCase("hcffaction")){
+        if(params.equalsIgnoreCase("faction")){
             Faction f = hcfplus.getData().getFaction(player);
             if(f != null){
                 return (color ? f.getColor() + "" : "") + f.getName();
